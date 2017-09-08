@@ -8,7 +8,7 @@ node_js:
 install:
   - npm i now -g
 script:
-  - now -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI
+  - now --public -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI
 branches:
   only:
   - master
