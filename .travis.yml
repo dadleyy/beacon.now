@@ -8,6 +8,7 @@ node_js:
 install:
   - npm i now -g
 script:
+  - now switch $NOW_TEAM_NAME -t $NOW_TOKEN
   - now --public -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI
 branches:
   only:
