@@ -1,0 +1,14 @@
+os: linux
+group: stable
+sudo: true
+dist: trusty
+language: node_js
+node_js:
+  - 8
+install:
+  - npm i now -g
+script:
+  - now -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI
+branches:
+  only:
+  - master
