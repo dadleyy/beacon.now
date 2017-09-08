@@ -9,7 +9,7 @@ install:
   - npm i now -g
 script:
   - now switch $NOW_TEAM_NAME -t $NOW_TOKEN
-  - now --public -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI
+  - now --public -t $NOW_TOKEN -e REDIS_URI=$REDIS_URI -e SYSLOG_NETWORK=$SYSLOG_NETWORK -e SYSLOG_ADDRESS=$SYSLOG_ADDRESS
 branches:
   only:
   - master
