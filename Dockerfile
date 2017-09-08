@@ -1,2 +1,3 @@
-FROM dadleyy/beacon-api:0.0.13
-CMD ["--redisuri=redis://redis"]
+FROM dadleyy/beacon-api:0.0.15
+ENV REDIS_URI redis://redis
+CMD ["-port=8080"]
